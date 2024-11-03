@@ -8,6 +8,7 @@ import 'package:badgemagic/badge_effect/invert_led_effect.dart';
 import 'package:badgemagic/badge_effect/marquee_effect.dart';
 import 'package:badgemagic/constants.dart';
 import 'package:badgemagic/providers/animation_badge_provider.dart';
+import 'package:badgemagic/providers/app_localisation.dart';
 import 'package:badgemagic/providers/badge_message_provider.dart';
 import 'package:badgemagic/providers/imageprovider.dart';
 import 'package:badgemagic/providers/speed_dial_provider.dart';
@@ -123,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen>
       child: DefaultTabController(
           length: 3,
           child: CommonScaffold(
-            title: 'BadgeMagic',
+            title: "title".tr(context),
             body: SafeArea(
               child: Stack(
                 children: [
@@ -192,10 +193,10 @@ class _HomeScreenState extends State<HomeScreen>
                               return null;
                             },
                           ),
-                          tabs: const [
-                            Tab(text: 'Speed'),
-                            Tab(text: 'Animation'),
-                            Tab(text: 'Effects'),
+                          tabs: [
+                            Tab(text: "speed".tr(context)),
+                            Tab(text: 'animation'.tr(context)),
+                            Tab(text: 'effects'.tr(context)),
                           ],
                         ),
                         SizedBox(
@@ -247,7 +248,7 @@ class _HomeScreenState extends State<HomeScreen>
                                             BorderRadius.circular(2.r),
                                         color: Colors.grey.shade400,
                                       ),
-                                      child: const Text('Save'),
+                                      child: Text('save'.tr(context)),
                                     ),
                                   ),
                                 ],
@@ -285,7 +286,7 @@ class _HomeScreenState extends State<HomeScreen>
                                             BorderRadius.circular(2.r),
                                         color: Colors.grey.shade400,
                                       ),
-                                      child: const Text('Transfer'),
+                                      child: Text('transfer'.tr(context)),
                                     ),
                                   ),
                                 ],

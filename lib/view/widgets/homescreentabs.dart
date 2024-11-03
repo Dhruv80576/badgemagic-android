@@ -1,4 +1,6 @@
 import 'package:badgemagic/constants.dart';
+import 'package:badgemagic/main.dart';
+import 'package:badgemagic/providers/app_localisation.dart';
 import 'package:badgemagic/view/widgets/animation_container.dart';
 import 'package:badgemagic/view/widgets/effects_container.dart';
 import 'package:flutter/material.dart';
@@ -26,17 +28,17 @@ class _EffectsTabState extends State<EffectTab> {
       children: [
         EffectContainer(
           effect: effInvert,
-          effectName: 'Invert',
+          effectName: 'effect_invert'.tr(context),
           index: 0,
         ),
         EffectContainer(
           effect: effFlash,
-          effectName: 'Effect',
+          effectName: 'effect_effect'.tr(context),
           index: 1,
         ),
         EffectContainer(
           effect: effMarque,
-          effectName: 'Marquee',
+          effectName: 'effect_marquee'.tr(context),
           index: 2,
         ),
       ],
@@ -63,17 +65,17 @@ class _AnimationTabState extends State<AnimationTab> {
           children: [
             AniContainer(
               animation: aniLeft,
-              animationName: 'Left',
+              animationName: 'anim_left'.tr(context),
               index: 0,
             ),
             AniContainer(
               animation: aniRight,
-              animationName: 'Right',
+              animationName: 'anim_right'.tr(context),
               index: 1,
             ),
             AniContainer(
               animation: aniUp,
-              animationName: 'Up',
+              animationName: 'anim_up'.tr(context),
               index: 2,
             ),
           ],
@@ -82,17 +84,17 @@ class _AnimationTabState extends State<AnimationTab> {
           children: [
             AniContainer(
               animation: aniDown,
-              animationName: 'Down',
+              animationName: 'anim_down'.tr(context),
               index: 3,
             ),
             AniContainer(
               animation: aniFixed,
-              animationName: 'Fixed',
+              animationName: 'anim_fixed'.tr(context),
               index: 4,
             ),
             AniContainer(
               animation: aniFixed,
-              animationName: 'Snowflake',
+              animationName: 'anim_snowflake'.tr(context),
               index: 5,
             ),
           ],
@@ -101,17 +103,17 @@ class _AnimationTabState extends State<AnimationTab> {
           children: [
             AniContainer(
               animation: aniPicture,
-              animationName: 'Picture',
+              animationName: 'anim_picture'.tr(context),
               index: 6,
             ),
             AniContainer(
               animation: animation,
-              animationName: 'Animation',
+              animationName: 'anim_anim'.tr(context),
               index: 7,
             ),
             AniContainer(
               animation: aniLaser,
-              animationName: 'Laser',
+              animationName: 'anim_laser'.tr(context),
               index: 8,
             ),
           ],

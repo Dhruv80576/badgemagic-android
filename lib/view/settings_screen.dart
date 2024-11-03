@@ -1,5 +1,9 @@
+import 'package:badgemagic/main.dart';
+import 'package:badgemagic/providers/app_localisation.dart';
+import 'package:badgemagic/providers/locale_provider.dart';
 import 'package:badgemagic/view/widgets/common_scaffold_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class SettingsScreen extends StatefulWidget {
   const SettingsScreen({super.key});
@@ -13,6 +17,10 @@ class SettingsScreenState extends State<SettingsScreen> {
   String selectedBadge = 'LSLED';
 
   final List<String> languages = ['ENGLISH', 'CHINESE'];
+  Map<String, String> languageMap = {
+    'ENGLISH': 'en',
+    'CHINESE': 'zh',
+  };
   final List<String> badges = ['LSLED', 'VBLAB'];
 
   @override
@@ -23,8 +31,8 @@ class SettingsScreenState extends State<SettingsScreen> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text(
-              'Language',
+            Text(
+              'language'.tr(context),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),
@@ -42,6 +50,9 @@ class SettingsScreenState extends State<SettingsScreen> {
                   onChanged: (String? newValue) {
                     setState(() {
                       selectedLanguage = newValue!;
+                      // print(languageMap[selectedLanguage]);
+                      Provider.of<LocaleProvider>(context, listen: false)
+                          .changeLocale(Locale(languageMap[newValue!]!));
                     });
                   },
                   items:
@@ -56,8 +67,8 @@ class SettingsScreenState extends State<SettingsScreen> {
               ),
             ),
             const SizedBox(height: 20),
-            const Text(
-              'Select Badge',
+            Text(
+              'select_badge'.tr(context),
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
             ),
             const SizedBox(height: 8),

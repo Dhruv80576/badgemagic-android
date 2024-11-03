@@ -1,4 +1,5 @@
 import 'package:badgemagic/constants.dart';
+import 'package:badgemagic/providers/app_localisation.dart';
 import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 
@@ -12,13 +13,13 @@ class BMDrawer extends StatelessWidget {
       child: ListView(
         padding: EdgeInsets.zero,
         children: <Widget>[
-          const DrawerHeader(
+          DrawerHeader(
             decoration: BoxDecoration(
               color: Colors.red,
             ),
             child: Center(
               child: Text(
-                'Badge Magic',
+                'title'.tr(context),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 18,
@@ -29,8 +30,8 @@ class BMDrawer extends StatelessWidget {
           ListTile(
             dense: true,
             leading: const Icon(Icons.edit),
-            title: const Text(
-              'Create Badges',
+            title: Text(
+              'create_badge'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -60,8 +61,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Draw Clipart',
+            title: Text(
+              'draw_badge'.tr(context),
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
@@ -84,8 +85,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Saved Badges',
+            title: Text(
+              'saved_badges'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -108,8 +109,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Saved Cliparts',
+            title: Text(
+              'saved_cliparts'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -132,8 +133,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Settings',
+            title: Text(
+              'settings'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -156,8 +157,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'About Us',
+            title: Text(
+              'about'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -196,8 +197,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Buy Badge',
+            title: Text(
+              'buy_bages'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -215,8 +216,8 @@ class BMDrawer extends StatelessWidget {
               Icons.share,
               color: Colors.black,
             ),
-            title: const Text(
-              'Share',
+            title: Text(
+              'share'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -236,8 +237,8 @@ class BMDrawer extends StatelessWidget {
               Icons.star,
               color: Colors.black,
             ),
-            title: const Text(
-              'Rate Us',
+            title: Text(
+              'rate'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -257,8 +258,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Feedback/Bug Reports',
+            title: Text(
+              'feedback'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
@@ -277,8 +278,8 @@ class BMDrawer extends StatelessWidget {
               height: 18,
               color: Colors.black,
             ),
-            title: const Text(
-              'Privacy Policy',
+            title: Text(
+              'privacy_policy'.tr(context),
               style: TextStyle(
                 color: Colors.black,
                 fontWeight: FontWeight.bold,
