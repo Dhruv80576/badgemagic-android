@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:badgemagic/bademagic_module/utils/byte_array_utils.dart';
 import 'package:badgemagic/bademagic_module/utils/converters.dart';
 import 'package:badgemagic/bademagic_module/utils/global_context.dart';
@@ -62,9 +63,9 @@ class _HomeScreenState extends State<HomeScreen>
   }
 
   void _controllerListner() {
-    animationProvider.badgeAnimation(
-        inlineImageProvider.getController().text, Converters());
     inlineImageProvider.controllerListener();
+    animationProvider.badgeAnimation(inlineImageProvider.getController().text,
+        Converters(), animationProvider.isEffectActive(InvertLEDEffect()));
   }
 
   @override
@@ -272,6 +273,8 @@ class _HomeScreenState extends State<HomeScreen>
                                               .isEffectActive(FlashEffect()),
                                           animationProvider
                                               .isEffectActive(MarqueeEffect()),
+                                          animationProvider.isEffectActive(
+                                              InvertLEDEffect()),
                                           speedDialProvider.getOuterValue(),
                                           modeValueMap[animationProvider
                                               .getAnimationIndex()],
