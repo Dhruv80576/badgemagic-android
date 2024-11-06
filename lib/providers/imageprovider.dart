@@ -165,10 +165,6 @@ class InlineImageProvider extends ChangeNotifier {
     String text = message.text;
     String before = text.substring(0, start);
     String after = text.substring(end);
-    print("before: " + before);
-    print('\n');
-    print("after: " + after);
-    print('\n');
     message.text = before + after;
     message.selection = TextSelection.fromPosition(
       TextPosition(offset: 0),
